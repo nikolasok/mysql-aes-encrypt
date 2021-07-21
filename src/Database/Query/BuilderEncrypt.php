@@ -1,6 +1,6 @@
 <?php
 
-namespace mrzainulabideen\AESEncrypt\Database\Query;
+namespace JfelixStudio\AESEncrypt\Database\Query;
 
 use Illuminate\Database\Query\Builder as BuilderCore;
 
@@ -19,7 +19,7 @@ class BuilderEncrypt extends BuilderCore
      */
     public function get($columns = ['*'])
     {
-        if($columns = ['*'])
+        if ($columns = ['*'])
             $columns = $this->fillableColumns;
 
         $original = $this->columns;
@@ -81,5 +81,3 @@ class BuilderEncrypt extends BuilderCore
         return !empty($this->fillableColumns) ? $this->fillableColumns : [];
     }
 }
-
-

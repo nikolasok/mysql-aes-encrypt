@@ -1,10 +1,10 @@
 <?php
 
-namespace mrzainulabideen\AESEncrypt\Database\Eloquent;
+namespace JfelixStudio\AESEncrypt\Database\Eloquent;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use mrzainulabideen\AESEncrypt\Database\Query\BuilderEncrypt as QueryBuilder;
+use JfelixStudio\AESEncrypt\Database\Query\BuilderEncrypt as QueryBuilder;
 
 abstract class ModelEncrypt extends Model
 {
@@ -39,7 +39,7 @@ abstract class ModelEncrypt extends Model
         static $mysql_session_set;
         if (!isset($mysql_session_set)) {
             $key = config('aesEncrypt.key');
-            $mode= config('aesEncrypt.mode');
+            $mode = config('aesEncrypt.mode');
             DB::statement("SET @@SESSION.block_encryption_mode = '{$mode}'");
             DB::statement(sprintf("SET @AESKEY = '%s'", $key));
             $mysql_session_set = true;
@@ -50,7 +50,7 @@ abstract class ModelEncrypt extends Model
     /**
      * Get a new query builder that doesn't have any global scopes.
      *
-     * @return \mrzainulabideen\AESEncrypt\Database\Eloquent\BuilderEloquentEncrypt|static
+     * @return \JfelixStudio\AESEncrypt\Database\Eloquent\BuilderEloquentEncrypt|static
      */
     public function newQueryWithoutScopes()
     {
@@ -62,16 +62,16 @@ abstract class ModelEncrypt extends Model
         // while it is constructing and executing various queries against it.
 
         return $builder->setModel($this)
-                    //->setfillableColumns($this->fillable)
-                    ->with($this->with)
-                    ->withCount($this->withCount);
+            //->setfillableColumns($this->fillable)
+            ->with($this->with)
+            ->withCount($this->withCount);
     }
 
     /**
      * Create a new Eloquent query builder for the model.
      *
-     * @param  \mrzainulabideen\AESEncrypt\Database\Query\BuilderEncrypt   $query
-     * @return \mrzainulabideen\AESEncrypt\Database\Eloquent\BuilderEloquentEncrypt|static
+     * @param  \JfelixStudio\AESEncrypt\Database\Query\BuilderEncrypt   $query
+     * @return \JfelixStudio\AESEncrypt\Database\Eloquent\BuilderEloquentEncrypt|static
      */
     public function newEloquentBuilder($query)
     {
@@ -81,14 +81,16 @@ abstract class ModelEncrypt extends Model
     /**
      * Get a new query builder instance for the connection.
      *
-     * @return \mrzainulabideen\AESEncrypt\Database\Query\BuilderEncrypt
+     * @return \JfelixStudio\AESEncrypt\Database\Query\BuilderEncrypt
      */
     protected function newBaseQueryBuilder()
     {
         $connection = $this->getConnection();
 
         return new QueryBuilder(
-            $connection, $connection->getQueryGrammar(), $connection->getPostProcessor()
+            $connection,
+            $connection->getQueryGrammar(),
+            $connection->getPostProcessor()
         );
     }
 

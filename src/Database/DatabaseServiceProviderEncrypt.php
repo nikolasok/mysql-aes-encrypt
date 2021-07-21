@@ -1,8 +1,8 @@
 <?php
 
-namespace mrzainulabideen\AESEncrypt\Database;
+namespace JfelixStudio\AESEncrypt\Database;
 
-use mrzainulabideen\AESEncrypt\Database\Connectors\ConnectionFactoryEncrypt;
+use JfelixStudio\AESEncrypt\Database\Connectors\ConnectionFactoryEncrypt;
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Database\DatabaseServiceProvider;
 

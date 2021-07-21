@@ -1,18 +1,18 @@
 <?php
 
-namespace mrzainulabideen\AESEncrypt\Database;
+namespace JfelixStudio\AESEncrypt\Database;
 
 use Illuminate\Database\MySqlConnection;
 
-use mrzainulabideen\AESEncrypt\Database\Schema\MySqlBuilderEncrypt;
-use mrzainulabideen\AESEncrypt\Database\Query\Grammars\MySqlGrammarEncrypt as QueryGrammar;
+use JfelixStudio\AESEncrypt\Database\Schema\MySqlBuilderEncrypt;
+use JfelixStudio\AESEncrypt\Database\Query\Grammars\MySqlGrammarEncrypt as QueryGrammar;
 
 class MySqlConnectionEncrypt extends MySqlConnection
 {
     /**
      * Get the default query grammar instance.
      *
-     * @return \mrzainulabideen\AESEncrypt\Database\Query\Grammars\MySqlGrammarEncrypt
+     * @return \JfelixStudio\AESEncrypt\Database\Query\Grammars\MySqlGrammarEncrypt
      */
     protected function getDefaultQueryGrammar()
     {

@@ -1,12 +1,12 @@
 <?php
 
-namespace mrzainulabideen\AESEncrypt\Database\Connectors;
+namespace JfelixStudio\AESEncrypt\Database\Connectors;
 
 use Illuminate\Database\Connectors\ConnectionFactory;
 
 use InvalidArgumentException;
 use Illuminate\Database\Connection;
-use mrzainulabideen\AESEncrypt\Database\MySqlConnectionEncrypt;
+use JfelixStudio\AESEncrypt\Database\MySqlConnectionEncrypt;
 use Illuminate\Database\SQLiteConnection;
 use Illuminate\Database\PostgresConnection;
 use Illuminate\Database\SqlServerConnection;

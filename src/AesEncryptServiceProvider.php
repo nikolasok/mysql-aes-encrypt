@@ -1,10 +1,10 @@
 <?php
 
-namespace mrzainulabideen\AESEncrypt;
+namespace JfelixStudio\AESEncrypt;
 
 use Illuminate\Database\DatabaseManager;
 use Illuminate\Support\ServiceProvider;
-use mrzainulabideen\AESEncrypt\Database\Connectors\ConnectionFactoryEncrypt;
+use JfelixStudio\AESEncrypt\Database\Connectors\ConnectionFactoryEncrypt;
 
 
 class AesEncryptServiceProvider extends ServiceProvider
@@ -24,7 +24,7 @@ class AesEncryptServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config/aesEncrypt.php' => config_path('aesEncrypt.php'),
+            __DIR__ . '/config/aesEncrypt.php' => config_path('aesEncrypt.php'),
         ], 'config');
     }
 
@@ -36,7 +36,7 @@ class AesEncryptServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/aesEncrypt.php',
+            __DIR__ . '/config/aesEncrypt.php',
             'aesEncrypt'
         );
 
