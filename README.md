@@ -96,7 +96,7 @@ See https://dev.mysql.com/doc/refman/8.0/en/server-system-variables.html#sysvar_
 To publish the config file and view run the following command
 
 ```bash
-php artisan vendor:publish --provider="mrzainulabideen\AESEncrypt\AesEncryptServiceProvider"
+php artisan vendor:publish --provider="JfelixStudio\AESEncrypt\AesEncryptServiceProvider"
 ```
 
 ## Encrypt existing data
