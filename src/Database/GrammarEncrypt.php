@@ -4,7 +4,7 @@ namespace JfelixStudio\AESEncrypt\Database;
 
 use Illuminate\Database\Query\Builder;
 
-class GrammarEncrypt extends \Illuminate\Database\Query\Grammars\Grammar
+class GrammarEncrypt extends \Illuminate\Database\Grammar
 {
     /**
      * Compile a select query into SQL.
