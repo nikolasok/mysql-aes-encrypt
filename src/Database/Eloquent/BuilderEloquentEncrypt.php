@@ -1,8 +1,8 @@
 <?php
 
-namespace mrzainulabideen\AESEncrypt\Database\Eloquent;
+namespace JfelixStudio\AESEncrypt\Database\Eloquent;
 
-use mrzainulabideen\AESEncrypt\Database\Query\BuilderEncrypt as QueryBuilder;
+use JfelixStudio\AESEncrypt\Database\Query\BuilderEncrypt as QueryBuilder;
 use Illuminate\Database\Eloquent\Model;
 
 class BuilderEloquentEncrypt extends \Illuminate\Database\Eloquent\Builder
@@ -10,7 +10,7 @@ class BuilderEloquentEncrypt extends \Illuminate\Database\Eloquent\Builder
     /**
      * Create a new Eloquent query builder instance.
      *
-     * @param mrzainulabideen\AESEncrypt\Database\Query\BuilderEncrypt  $query
+     * @param JfelixStudio\AESEncrypt\Database\Query\BuilderEncrypt  $query
      * @return void
      */
     public function __construct(QueryBuilder $query)
