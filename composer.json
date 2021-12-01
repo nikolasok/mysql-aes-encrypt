@@ -1,5 +1,5 @@
 {
-  "name": "jfelixstudio/aesencrypt",
+  "name": "nikolasok/aesencrypt",
   "type": "library",
   "description": "Laravel MySql AES Encrypt/Decrypt",
   "keywords": [
